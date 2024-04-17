@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono");
+body {
+  font: sans-serif;
+
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.handle {
+  position: absolute;
+  width: 250px;
+  border-radius: 15px;
+  left: 25%;
+  top: 15px;
+  bottom: 15px;
+  padding: 15px;
+  background: radial-gradient(
+      center,
+      circle,
+      rgba(255, 255, 255, 0.35),
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0) 21%
+    ),
+    radial-gradient(
+      center,
+      circle,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 21%
+    ),
+    radial-gradient(center, circle farthest-corner, grey, lighten(gray, 15%));
+  background-size: 10px 10px, 10px 10px, 100% 100%;
+  background-position: 1px 1px, 0px 0px, center center;
+}
+.display {
+  border: 11px solid #333;
+  border-radius: 8px;
+  width: 100%;
+  padding: 7px 17px;
+  font-family: Space Mono, monospace;
+  height: 80px;
+  overflow-y: hidden;
+  color: #000;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+.buttons {
+  display: flex;
+  width: 100%;
+  height: 370px;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+}
+.btn-container {
+  flex-basis: 50%;
+  position: relative;
+
+  &.bottom {
+    flex-basis: 100%;
+  }
+}
+button.btn-floor {
+  position: relative;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid lightgray;
+  display: block;
+  cursor: pointer;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 23px;
+  color: #3c3c3c;
+  outline: none;
+
+  &:hover {
+    border-color: lime;
+  }
+  &:active,
+  &.active {
+    background: lime;
+    color: lighten(lime, 40%);
+    border-color: green;
+  }
+}
+
+.building {
+  width: 300px;
+  position: absolute;
+  background: #ccc26b;
+  background-size: cover, cover;
+  height: 460px;
+  left: 50%;
+  top: 50px;
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    background: inherit;
+    top: -30px;
+    left: 85px;
+    width: 130px;
+    height: 30px;
+  }
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background: #333;
+    bottom: -20px;
+    left: -15px;
+    width: 330px;
+    height: 20px;
+  }
+}
+.floors {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column-reverse;
+  
+
+  .floor {
+    position: relative;
+    height: 100%;
+    background-color: red;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      border-top: 10px solid turquoise;
+      opacity: 0.8;
+    }
+
+
+    .floor-window {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      font-size: 20px;
+      padding: 30px 0px 0px 20px;
+
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        background: rgb(255, 255, 255);
+        border: 2px solid darkgoldenrod;
+        width: 40px;
+        height: 40px;
+        top: 20px;
+        margin-left: -20px;
+      }
+      &:after {
+        left: 80%;
+      }
+      &:before {
+        left: 20%;
+      }
+    }
+  }
+}
+.elevator-container {
+  position: absolute;
+  background: turquoise;
+  width: 100px;
+  left: 100px;
+  height: 100%;
+  z-index: 10;
+
+
+  .elevator {
+    width: 60px;
+    height: 60px;
+    margin-left: -20px;
+    margin-top: 7px;
+    left: 41%;
+    background: white;
+    border: 3px solid #333;
+    border-top-width: 10px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    transform: translatey(0px);
+
+    &-door {
+      width: 100%;
+      height: 100%;
+      right: 0;
+      position: relative;
+      background: silver;
+      transition: 0.3s ;
+      transform: translateX(-55px); 
+
+      
+    }
+    &-door2{ 
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: silver;
+      left: 100%;
+      bottom: 100%;
+      transition: 0.3s ;
+      left: 0;
+      transform: translateX(55px); 
+    
+     }
+    &-light {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      border-radius: 50%;
+      border: 1px solid black;
+      width: 8px;
+      height: 8px;
+      margin-left: -4px;
+      background: lime;
+    }
+  }
+}
