@@ -93,7 +93,7 @@ button.btn-floor:active, button.btn-floor.active {
   position: absolute;
   display: block;
   content: "";
-  background: inherit;
+  background: red;
   top: -30px;
   left: 85px;
   width: 130px;
@@ -127,7 +127,7 @@ button.btn-floor:active, button.btn-floor.active {
   width: 100%;
   position: absolute;
   top: 0;
-  border-top: 10px solid turquoise;
+  border-top: 10px solid black;
   opacity: 0.8;
 }
 .floors .floor .floor-window {
@@ -161,7 +161,7 @@ button.btn-floor:active, button.btn-floor.active {
 
 .elevator-container {
   position: absolute;
-  background: turquoise;
+  background: black;
   width: 100px;
   left: 100px;
   height: 100%;
@@ -179,7 +179,7 @@ button.btn-floor:active, button.btn-floor.active {
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 1s;
   transform: translatey(0px);
 }
 .elevator-container .elevator-door {
@@ -188,7 +188,7 @@ button.btn-floor:active, button.btn-floor.active {
   right: 0;
   position: relative;
   background: silver;
-  transition: 0.3s;
+  transition: 1s;
   transform: translateX(-55px);
 }
 .elevator-container .elevator-door2 {
