@@ -7,6 +7,7 @@ function opening(){
     elevatorDoor.style.transform = "translateX(-28px)";
     elevatorDoor2.style.transform = "translateX(28px)";
 }
+
 start.addEventListener("click",opening);
 
 

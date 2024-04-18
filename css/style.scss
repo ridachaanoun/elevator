@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono");
-body {
-  font: sans-serif;
-
-}
 *,
 *:after,
 *:before {
@@ -21,21 +17,6 @@ body {
   top: 15px;
   bottom: 15px;
   padding: 15px;
-  background: radial-gradient(
-      center,
-      circle,
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0) 20%,
-      rgba(255, 255, 255, 0) 21%
-    ),
-    radial-gradient(
-      center,
-      circle,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0) 20%,
-      rgba(0, 0, 0, 0) 21%
-    ),
-    radial-gradient(center, circle farthest-corner, grey, lighten(gray, 15%));
   background-size: 10px 10px, 10px 10px, 100% 100%;
   background-position: 1px 1px, 0px 0px, center center;
 }
@@ -51,10 +32,19 @@ body {
   line-height: 1.45;
   margin-bottom: 10px;
 }
+.screensteps{
+  font-family: Space Mono, monospace;
+  width: 220px;
+  border: solid black 2px;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 25px;
+
+}
 .buttons {
   display: flex;
   width: 100%;
-  height: 370px;
+  height: 300px;
   justify-content: space-around;
   flex-wrap: wrap-reverse;
 }
@@ -206,7 +196,7 @@ button.btn-floor {
       right: 0;
       position: relative;
       background: silver;
-      transition: 1s ;
+      transition: 2s ;
       transform: translateX(-55px); 
 
       
@@ -218,7 +208,7 @@ button.btn-floor {
       background: silver;
       left: 100%;
       bottom: 100%;
-      transition: 0.3s ;
+      transition: 2s ;
       left: 0;
       transform: translateX(55px); 
     
